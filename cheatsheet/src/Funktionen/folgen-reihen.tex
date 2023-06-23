@@ -1,0 +1,43 @@
+% !TeX root = ../../ZF_bmicha_Ana.tex
+\subsection{Folgen und Reihen}
+    \begin{description}
+        \item[konvergent] Es existiert ein Grenzwert sonst divergent.
+        \item[beschränkt] Alle Glieder in \emph{endlich breitem}, \emph{waagerechten Parallelstreifen} enthalten.
+        \item[monoton wachsend] $\quad a_{n+1} \geq a_n \qquad  (\emph{strikt}:\,\, >)$
+    \end{description}
+    \fbox{mon. wachsend/ fallend \& beschränkt $\Rightarrow$ konvergent}
+    \subsubsection{Rechenregeln für konvergente Folgen}
+        Falls $\displaystyle \lim_{n\to \infty} a_n = a$ und $\displaystyle \lim_{n\to \infty} b_n = b$, gilt:
+        \begin{align*}
+            \lim_{n \to \infty}(a_n \pm b_n) &= a \pm b\\
+            \lim_{n \to \infty}(a_n \cdot b_n) &= a \cdot b\\
+            \lim_{n \to \infty}(a_n / b_n) &= a / b.
+        \end{align*}
+        Gilt auch für Funktionen; sofern Grenzwert existiert.
+        % \vspace*{-1em}
+    \subsubsection{Geometrische Reihe}
+        \vspace{-1.5em}
+        \begin{align*}
+            \sum_{n=0}^{k}a \cdot q^n &= a \cdot \frac{1 - q^{k+1}}{1-q\phantom{^{k+1}}}\\
+            \sum_{n=0}^{\infty}a \cdot q^n &= \frac{a}{1-q}, \quad \textrm{falls } \abs*{q} < 1
+        \end{align*}
+        \vspace*{-0.5em}
+    \subsubsection{Arithmetische Reihe}
+        \vspace{-1em}
+        $$
+            \sum_{n=1}^{\infty} \ [a_1 + (n-1) \cdot d] = \frac{n}{2} \cdot (a_1 + a_n)
+        $$
+    \subsubsection{häufige Reihen}
+        \vspace{0em}
+        \begin{itemize}
+            \item $\displaystyle \sum_{n=1}^{k} n = \frac{k \cdot (k + 1)}{2} $ \hspace*{0em} $\triangleright \displaystyle \sum_{n=0}^{\infty} \frac{1}{n!} = \lim\limits_{n \rightarrow \infty} \left(1 + \frac{1}{n}\right)^n = e$
+            % \item $\displaystyle \sum_{n=0}^{\infty} \frac{1}{n!} = e$
+            \item $\displaystyle \sum_{n=1}^{\infty} \frac{1}{n^{\alpha}}
+            \begin{cases}
+                \alpha = 1 \rightarrow \text{ harm. Reihe}\\
+                = \infty, \alpha \leq 1 \text{ (divergiert)}\\
+                \neq \pm \infty, \alpha > 1 \text{ (konvergiert)}
+            \end{cases}
+            $
+        \end{itemize}
+        

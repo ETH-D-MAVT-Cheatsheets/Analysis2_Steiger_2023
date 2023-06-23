@@ -1,14 +1,134 @@
 \documentclass{cheatsheet}
 \usepackage{bm}
 \usepackage{textcomp, mathcomp}
-\usepackage{empheq}
 \usepackage{pbox}
+\usepackage{amsmath, amssymb, mathtools, empheq, physics}
+\usepackage{xcolor}
+\usepackage{graphicx}
+% for wild tikz drawings
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{mathdots}
+\usepackage{yhmath}
+\usepackage{cancel}
+\usepackage{color}
+\usepackage{siunitx}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{amssymb}
+\usepackage{gensymb}
+\usepackage{tabularx}
+\usepackage{extarrows}
 \usepackage{booktabs}
 
-\doctitle{... Cheatsheet}
-\author{AUTHOR \\ \vspace*{-0.2em}}
+\usetikzlibrary{fadings}
+\usetikzlibrary{patterns}
+\usetikzlibrary{shadows.blur}
+\usetikzlibrary{shapes}
 
+\doctitle{Analysis 2 Cheatsheet}
+\author{\href{https://n.ethz.ch/\~bmicha}{Micha Bosshart} - bmicha@ethz.ch \\ \vspace*{-0.2em}}
+
+%\def\HyperFirstAtBeginDocument#1{#1} 
 \begin{document}
-\section{1. Section}
-	\input{src/1_section/1_subsection.tex}
+    \section{Funktionen}
+        \input{src/Funktionen/folgen-reihen.tex}
+        \subsection{Grenzwerte}
+        \input{src/Funktionen/bernoulli_hopital.tex}
+        \input{src/Funktionen/landau_symbole.tex}
+        \input{src/Funktionen/eigenschaften.tex}
+        \input{src/Funktionen/asymptoten.tex}
+        \input{src/Funktionen/hyperbolische_funktionen.tex}
+    \section{Komplexe Zahlen}
+        \input{src/Komplexe_Zahlen/basics.tex}
+        \input{src/Komplexe_Zahlen/nullstellen-reeller-Polynome.tex}
+        \input{src/Komplexe_Zahlen/konjugierte.tex}
+    \section{Potenzreihen}
+        \input{src/Potenzreihen/allgemein.tex}
+        \input{src/Potenzreihen/konvergenzradius.tex}
+        \input{src/Potenzreihen/taylorreihen.tex}
+
+        \newpage
+    \section{Trigonometrie}
+        \input{src/Trigonometrie/tabelle.tex}
+        % \input{src/Trigonometrie/einheitskreis.tex}
+        \input{src/Trigonometrie/rechenregeln.tex}
+        \input{src/Trigonometrie/funktionsmodifikation.tex}
+    \section{Mehrdimensionale Fkt. - Diff. Rechnung}
+        \input{src/Mehrdimensionale-Funktionen_Differentialrechnung/fehlerrechnung.tex}
+        \input{src/Mehrdimensionale-Funktionen_Differentialrechnung/niveaulinien-flaechen.tex}
+        \input{src/Mehrdimensionale-Funktionen_Differentialrechnung/gradient.tex}
+        \input{src/Mehrdimensionale-Funktionen_Differentialrechnung/richtungsableitung.tex}
+        \input{src/Mehrdimensionale-Funktionen_Differentialrechnung/tangentialebenen.tex}
+        \input{src/Mehrdimensionale-Funktionen_Differentialrechnung/extremalstellen-2D.tex}
+        \input{src/Mehrdimensionale-Funktionen_Differentialrechnung/satz-von-schwarz.tex}
+         \input{src/Mehrdimensionale-Funktionen_Differentialrechnung/integrabilitaetsbedingung.tex}
+         \input{src/Mehrdimensionale-Funktionen_Differentialrechnung/verallg_kettenregel.tex}
+     \section{Mehrdimensionale Fkt. - Int. Rechnung}
+         \input{src/Mehrdimensionale-Funktionen_Integralrechnung/doppel-und-dreifachintegrale.tex}
+         \input{src/Mehrdimensionale-Funktionen_Integralrechnung/dimensionsvergleich.tex}
+         \input{src/Mehrdimensionale-Funktionen_Integralrechnung/koordinatentransformationen.tex}
+         \input{src/Mehrdimensionale-Funktionen_Integralrechnung/ellipsenkoordinaten.tex}
+         \input{src/Mehrdimensionale-Funktionen_Integralrechnung/jacobi.tex}
+         \input{src/Mehrdimensionale-Funktionen_Integralrechnung/schwerpunkte.tex}
+         \input{src/Mehrdimensionale-Funktionen_Integralrechnung/traegheitsmoment.tex}
+         \input{src/Mehrdimensionale-Funktionen_Integralrechnung/leibnitz.tex}
+         \input{src/Mehrdimensionale-Funktionen_Integralrechnung/oberflaenintegrale.tex}
+         \input{src/Mehrdimensionale-Funktionen_Integralrechnung/parametrisierungen-flaechen.tex}
+     \section{Vektoranalysis}
+         \input{src/Vektoranalysis/allgemein.tex}
+         \input{src/Vektoranalysis/divrot.tex}
+         \input{src/Vektoranalysis/fluss.tex}
+         \input{src/Vektoranalysis/arbeit.tex}
+         \input{src/Vektoranalysis/DGLs-und-vektorfelder.tex}
+     \section{Differentialgleichungen (DGL)}
+         \input{src/Differentialgleichungen/allgemein.tex}
+         \input{src/Differentialgleichungen/separierbare-DGL.tex}
+         \input{src/Differentialgleichungen/substitutionen.tex}
+         \input{src/Differentialgleichungen/orthogonaltrajektorien.tex}
+         \input{src/Differentialgleichungen/enveloppe.tex}
+         \input{src/Differentialgleichungen/linear-1-ordnung.tex}
+         \input{src/Differentialgleichungen/spezielle-DGL.tex}
+         \input{src/Differentialgleichungen/DGL-konst-Koeff.tex}
+         \input{src/Differentialgleichungen/Lagrange-2-Ordnung.tex}
+         \input{src/Differentialgleichungen/Euler-DGL.tex}
+         \input{src/Differentialgleichungen/dgl_systeme.tex}
+    \section{Appendix A}
+        \input{src/Appendix/nullstellen_reeller_polynome.tex}
+        \input{src/Appendix/intcosnsinn.tex}
+        \input{src/Appendix/polynome_nten_grades.tex}
+        \input{src/Appendix/wichtige_grenzwerte.tex}
+        \input{src/Appendix/reihenentwicklung.tex}
+        \input{src/Appendix/wichtige_integrale.tex}
+        \input{src/Appendix/ableitung_un_gerade_fkt.tex}
+        \input{src/Appendix/exponentialgesetze.tex}
+        \input{src/Appendix/polarkoordinaten.tex}
+
+    \newpage
+
+    \section{Parametrisierungen}
+        \input{src/Parametrisierungen/parametrisierungen.tex}
+        \input{src/Parametrisierungen/normal_tangentialvektoren.tex}
+    \section{Differentialrechnung}
+        \input{src/Differentialrechnung/inverse_ableitung.tex}
+        \input{src/Differentialrechnung/tangenten.tex}
+        \input{src/Differentialrechnung/1D_fehlerrechnung.tex}
+        \input{src/Differentialrechnung/evolute.tex}
+        \input{src/Differentialrechnung/kruemmung.tex}
+    \section{Integralrechnung}
+        \input{src/Integralrechnung/leibnitz.tex}
+        \input{src/Integralrechnung/hauptsatz_infinitesimalrechnung.tex}
+        \input{src/Integralrechnung/partialbruchzerlegung.tex}
+        \input{src/Integralrechnung/partielle-integration.tex}
+        \input{src/Integralrechnung/bogenlaenge.tex}
+        \input{src/Integralrechnung/flaechenberechnungen.tex}
+        \input{src/Integralrechnung/rotationsvolumen.tex}
+        \input{src/Integralrechnung/rotationsoberflaechen.tex}
+        \input{src/Integralrechnung/schwerpunkt_traegheitsmoment.tex}
+        \input{src/Integralrechnung/uneigentliche-integrale.tex}
+        \vfill \null \columnbreak
+    \section{Appendix B}
+        \input{src/Appendix/haeufige_parametrisierungen.tex}
+        \vfill \null \columnbreak
+        \input{src/Appendix/haeufige_funktionsgraphen.tex}
 \end{document}
