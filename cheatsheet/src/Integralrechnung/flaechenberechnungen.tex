@@ -2,13 +2,13 @@
 \subsection{Flächenberechnungen}
     \vspace{0.5em}
     \begin{itemize}
-        \item Parametrisierung $\rvec=(x(t),y(t))^T$ \hfill
+        \item Parametrisierung $\vec{r}=(x(t),y(t))^T$ \hfill
     \end{itemize}
     \begin{minipage}{0.65\linewidth}
         \vspace{-1em}
         \begin{itemize}
-        \item[]  $\displaystyle A= \underbrace{\int_{t_1}^{t_2} + y \dxt \, dt}_{x \textrm{ monoton steigend}}$
-        \item[]  $\displaystyle A= \underbrace{\int_{t_1}^{t_2} - y \dxt \, dt}_{x \textrm{ monoton fallend}}$
+        \item[]  $\displaystyle A= \underbrace{\int_{t_1}^{t_2} + y \dot{x} \, dt}_{x \textrm{ monoton steigend}}$
+        \item[]  $\displaystyle A= \underbrace{\int_{t_1}^{t_2} - y \dot{x} \, dt}_{x \textrm{ monoton fallend}}$
         \end{itemize}
     \end{minipage}
     \begin{minipage}{0.34\linewidth}
@@ -21,7 +21,7 @@
             \begin{minipage}{0.65\linewidth}
                 \begin{itemize}
                     \item Parametrisierung
-                    \item[]  $\displaystyle A= \frac{1}{2} \int_{t_1}^{t_2} (x \dyt - y \dxt) \, dt$   
+                    \item[]  $\displaystyle A= \frac{1}{2} \int_{t_1}^{t_2} (x \dot{y} - y \dot{x}) \, dt$   
                     \end{itemize}
             \end{minipage}
             \begin{minipage}{0.34\linewidth}

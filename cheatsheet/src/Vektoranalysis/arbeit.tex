@@ -1,13 +1,50 @@
 % !TeX root = ../../ZF_bmicha_Ana.tex
-\subsection{Arbeit \texorpdfstring{\hfill $W$}{W}}
-    \vspace{-1em}
+\subsection{Arbeit}
+    \vspace{-0.5em}
     \begin{align*}
-        W &= \int_C \vvec \ d \vec{r} &\textrm{Allgemein}\\
-        W &= \int_C \vvec(\rvec(t)) \cdot \dot{\rvec}(t) \ dt &\textrm{Parametr.}\\
-        W &= \iint_{A} \rot(\vvec) \cdot \novec \ dA & \textrm{Satz von Stokes}\\[0.125em]
+        W &= \int_C \vec{v} \ d \vec{r} &\textrm{Allgemein}\\
+        W &= \int_C \vec{v} (\vec{r}(t)) \cdot \dot{\vec{r}}(t) \ dt &\textrm{Parametr.}\\
+        W &= \iint_{A} \textrm{rot}(\vec{v}) \cdot \vec{n_0} \ dA & \textrm{Satz von Stokes}\\
         W &= f\left(P_{\textrm{Ende}}\right) - f\left(P_{\textrm{Anfang}}\right) &\textrm{Potentialfeld}
     \end{align*}
 
+    \subsubsection{Satz von Stokes} \label{sec:SatzVonStokes}
+        Falls $\vec{v}$ auf ganz $A$ \textbf{definiert} und \textbf{stetig differenzierbar} (\textit{regulär}) ist, gilt
+        $$
+            \int_{\partial A} \vec{v} \ d \vec{r} = \iint_{A} \text{rot}(\vec{v}) \cdot \vec{n_0} \ dA,
+        $$
+        wobei $\partial A$ den geschlossenen Rand der Fläche $A$ bezeichnet.
+        Der Normaleneinheitsvektor $\vec{n_0}$ auf $A$ beschreibt mit der \textit{Rechte-Hand-Regel} den Umlaufsinn von $\partial A$.
+
+    \subsubsection{Potentialfeld $\vec{v}$ zum Potential $f$ \label{sec:Potentialfeld}}
+        Falls der Definitionsbereich $D(f)$ eines \textbf{wirbel\-freien} ($\text{rot}(\vec{v}) \equiv 0$) Vektorfeldes \textbf{einfach zusammenhängend} (EZH) ist, nennen wir es \textit{konservativ}:
+        \mathbox{
+           D(f) \textrm{ EZH }\  \textit{und }\ \text{rot}(\vec{v}) \equiv \vec{0} \quad \Rightarrow \quad \vec{v} = \grad(f).
+        }
+        $$ 
+        \vec{v} = 
+        \begin{pmatrix}
+            u\\v\\w
+        \end{pmatrix}
+        =
+        \begin{pmatrix}
+            f_x\\f_y\\f_z
+        \end{pmatrix}
+        = \grad(f)
+        $$ 
+
+        $$
+            f(x,y,z) = \int u \ dx = \int v \ dy = \int w \ dz
+        $$
+        Die Arbeit zwischen zwei Punkten entspricht der Potentialdifferenz.
+        % \mathbox{
+        %         $\vec{v}$ Potentialfeld &$\Longrightarrow$ $\text{rot}(\vec{v})=\vec{0}$
+        % }
+        \begin{empheq}[box=\fbox]{align*}
+            \vec{v} \textrm{ Potentialfeld } &\Longrightarrow \text{rot}(\vec{v})=\vec{0}\\
+            \vec{v} \textrm{ Potentialfeld } &\Longleftarrow \text{rot}(\vec{v})=\vec{0} \textrm{ \& } D(\vec{v}) = \textrm{ EZH}
+        \end{empheq}
+    
     \subsubsection{Arbeit Berechnen}
         \vspace{0.5em}
         \resizebox*{0.99\linewidth}{!}{
@@ -43,50 +80,12 @@
                 % Text Node
                 \draw (515,175) node [anchor=north west][inner sep=0.75pt]   [align=left] {Nein};
                 % Text Node
-                \draw (185,170) node [anchor=north west][inner sep=0.75pt]    {$W = \iint_{A} \rot(\vvec) \cdot \novec \ dA$};
+                \draw (185,170) node [anchor=north west][inner sep=0.75pt]    {$W = \iint_{A} \text{rot}(\vec{v}) \cdot \vec{n_0} \ dA$};
                 % Text Node
                 \draw (324,220) node [anchor=north west][inner sep=0.75pt]    {$W = f(P_2) - f(P_1)$};
-                \draw (290,235.5) node [anchor=north west][inner sep=0.75pt]    {falls $D(\vvec)$ einfach zusammenhängend};
+                \draw (290,235.5) node [anchor=north west][inner sep=0.75pt]    {falls $D(\vec{v})$ einfach zusammenhängend};
                 % Text Node
-                \draw (496.33,220) node [anchor=north west][inner sep=0.75pt]    {$W = \int_C \vvec(\rvec(t)) \cdot \dot{\rvec}(t) \ dt$};
+                \draw (496.33,220) node [anchor=north west][inner sep=0.75pt]    {$W = \int_C \vec{v}(\vec{r}(t)) \cdot \dot{\vec{r}}(t) \ dt$};
             \end{tikzpicture}
         }
-
-    \subsubsection{Satz von Stokes} \label{sec:SatzVonStokes}
-        Falls $\vvec$ auf ganz $A$ \textbf{definiert} und \textbf{stetig differenzierbar} (\textit{regulär}) ist, gilt
-        $$
-            \int_{\partial A} \vvec \ d \rvec = \iint_{A} \rot(\vvec) \cdot \novec \ dA,
-        $$
-        wobei $\partial A$ den geschlossenen Rand der Fläche $A$ bezeichnet.
-        Der Normaleneinheitsvektor $\novec$ auf $A$ beschreibt mit der \textit{Rechte-Hand-Regel} den Umlaufsinn von $\partial A$.
-
-    \subsubsection{Potentialfeld \texorpdfstring{$\vvec$}{v} zum Potential \texorpdfstring{$f$}{f}} \label{sec:Potentialfeld}
-        Falls der Definitionsbereich $D(f)$ eines \textbf{wirbel\-freien} ($\rot(\vvec) \equiv 0$) Vektorfeldes \textbf{einfach zusammenhängend} (EZH) ist, nennen wir es \textit{konservativ}:
-        \mathbox{
-           D(f) \textrm{ EZH }\  \textit{und }\ \rot(\vvec) \equiv \vec{0} \quad \Rightarrow \quad \vvec = \grad(f).
-        }
-        $$ 
-        \vvec = 
-        \begin{pmatrix}
-            u\\v\\w
-        \end{pmatrix}
-        =
-        \begin{pmatrix}
-            f_x\\f_y\\f_z
-        \end{pmatrix}
-        = \grad(f)
-        $$ 
-
-        $$
-            f(x,y,z) = \int u \ dx = \int v \ dy = \int w \ dz
-        $$
-        Die Arbeit zwischen zwei Punkten entspricht der Potentialdifferenz.
-        % \mathbox{
-        %         $\vvec$ Potentialfeld &$\Longrightarrow$ $\rot(\vvec)=\vec{0}$
-        % }
-        \begin{empheq}[box=\fbox]{align*}
-            \vvec \textrm{ Potentialfeld } &\Longrightarrow \rot(\vvec)=\vec{0}\\
-            \vvec \textrm{ Potentialfeld } &\Longleftarrow \rot(\vvec)=\vec{0} \textrm{ \& } D(\vvec) = \textrm{ EZH}
-        \end{empheq}
-    
     
