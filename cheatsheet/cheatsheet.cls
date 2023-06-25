@@ -105,7 +105,7 @@
     \begin{adjustwidth}{-\@@leftTextMargin}{-\@@rightTextMargin}
         \begin{tcolorbox}[%
                         arc=1mm,%
-                        colback=\customColor!60,%
+                        colback=\customColor!70,%
                         boxrule=0pt,%
                         valign=center,%
                         height from=5mm to 5cm,%
@@ -134,7 +134,7 @@
     \begin{adjustwidth}{-\@@leftTextMargin}{-\@@rightTextMargin}
         \begin{tcolorbox}[%
                         arc=1mm,% corner radius
-                        colback=\customColor!30,%
+                        colback=\customColor!40,%
                         boxrule=0pt,% border box
                         valign=center,% vertically center title
                         height from=5mm to 5cm,%
@@ -144,7 +144,7 @@
                         right=0.2mm,%
                         after skip = 0.01mm,%
                         before skip = 0.01mm,%
-                        fontupper=\color{black}%
+                        fontupper=\color{white}%
                         ]%
                         \textbf{#1}%
         \end{tcolorbox}%
