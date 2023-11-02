@@ -1,0 +1,37 @@
+% !TeX root = ../../ZF_bmicha_Ana.tex
+\subsection{Fehlerrechnung}
+    Die berechnete Grösse $f$ ist abhängig von der gemessenen Grösse $x$.
+    Die gemessene Grösse weicht mit dem Messfehler $dx$ von der Realität ab.
+    \begin{itemize}
+        \item \textbf{Linearisierung}
+            \vspace*{-0.5em}
+            \mathbox{
+                f(x) \approx  f(x_0) + \left. \frac{\partial f}{\partial x} \right|_{x_0} \cdot (x - x_0)
+            }
+        \item \textbf{Absoluter Fehler}
+            \vspace*{-0.5em}
+            \mathbox{
+                \Delta f = f(x + \Delta x) -\! f(x) \quad \overset{\Delta x \to 0}{\longrightarrow} \quad \Delta f \approx f'(x)\ \Delta x
+            }
+        \item \textbf{Relativer Fehler}
+            \vspace*{-0.5em}
+            \mathbox{
+                \frac{df}{f}
+            }
+    \end{itemize}
+    \subsubsection{Bemerkungen}
+        \vspace{0.5em}
+        \begin{minipage}{0.54\linewidth}
+            \centering \vspace{4pt}
+            $1\%$ Genauigkeit
+            $$
+                \frac{\Delta x}{x} = 1\% = \frac{1}{100}
+            $$          
+        \end{minipage}
+        \begin{minipage}{0.45\linewidth}
+            \centering
+            Messfehler von $1^\circ$
+            $$
+                \Delta \alpha = \frac{\pi}{180}
+            $$
+        \end{minipage}

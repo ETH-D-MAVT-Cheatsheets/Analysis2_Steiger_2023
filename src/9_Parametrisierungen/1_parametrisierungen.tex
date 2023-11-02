@@ -1,0 +1,43 @@
+% !TeX root = ../../ZF_bmicha_Ana.tex
+\subsection{Kreis / Ellipse}
+    Ellipse mit Mittelpunkt $(x_o, y_o)$ und Halbachsen $a$ \& $b$.\\
+    \underline{\textit{implizit}:}
+    $$
+        \left(
+            \frac{x-x_o}{a}
+        \right)^2
+        +
+        \left(
+            \frac{y-y_o}{b}
+        \right)^2
+        = 1
+    $$
+    \underline{\textit{parametrisiert}:}
+    \begin{align*}
+        x(t) &= x_o + a \cdot \cos(t)\\
+        y(t) &= y_o + b \cdot \sin(t)
+    \end{align*}
+
+\subsection{Hyperboloid}
+    \underline{\textit{implizit}:}
+    $$
+    \left(
+        \frac{x-x_o}{a}
+    \right)^2
+    +
+    \left(
+        \frac{y-y_o}{b}
+    \right)^2
+    +
+    \left(
+        \frac{z-z_o}{c}
+    \right)^2
+    = 1
+    $$
+
+    \underline{\textit{parametrisiert}:}
+    \begin{align*}
+        x(\lambda, t) &= a(\cos(t) - \lambda \sin(t))\\
+        y(\lambda, t) &= b(\sin(t) + \lambda \cos(t))\\
+        z(\lambda, t) &= c\lambda
+    \end{align*}

@@ -1,0 +1,22 @@
+% !TeX root = ../../ZF_bmicha_Ana.tex
+\subsection{Uneigentliche Integrale}
+    \begin{center}
+        Konvergiert $\Longleftrightarrow$ Grenzwert existiert
+    \end{center}
+    
+    \subsubsection{1. Gattung}
+            Zu integrierende Funktion ist an der Grenze nicht definiert. Bsp.:
+            $$
+                \int\limits_{0}^{1}  \frac{1}{x} \ dx = \lim_{\xi \to 0^+} \int\limits_{\xi}^{1} \frac{1}{x} \ dx
+            $$
+    \subsubsection{2. Gattung}
+        Unendlicher Integrationsbereich. Bsp.:
+        $$
+            \int\limits_{0}^{\infty}  f(x) \ dx = \lim_{\xi \to \infty}\int\limits_{0}^{\xi} f(x) \ dx
+        $$
+    \subsubsection{Tricks}
+        \vspace{-0.5em}
+        \begin{align*}
+            \int\limits_{1}^{\infty}  \frac{1}{x^\alpha} \ dx  \qquad &\text{konvergiert} \iff \alpha > 1\\
+            \int\limits_{0}^{1}  \frac{1}{x^\alpha} \ dx  \qquad &\text{konvergiert} \iff \alpha < 1  
+        \end{align*}

@@ -1,0 +1,36 @@
+% !TeX root = ../../ZF_bmicha_Ana.tex
+\subsection{Extremalstellen von $f(x,y)$}
+    \vspace{0.25em}
+    \begin{enumerate}
+        \item Inneres untersuchen $\to$ $\textrm{grad}f \overset{!}{=} 0$
+        \item Rand untersuchen
+        \begin{itemize}
+            \item Lagrange Multiplikatoren
+            \begin{enumerate}
+                \item $g(x,y)$ beschreibt Rand
+                \item $\textrm{grad}f(x_o,y_o) = \lambda \cdot \textrm{grad}\, g(x_o,y_o)$\\[0.25em]
+                      \phantom{llll}$\textrm{grad}\, g(x_o,y_o) \neq 0,\phantom{ll} \lambda \in \mathbb{R}$
+                \item Gleichungssystem aus (a) und (b) lösen.
+            \end{enumerate}
+            \item Parametrisierung
+            \begin{enumerate}
+                \item Rand parametrisieren
+                \item Parametrisierung in $f$ einsetzen
+                \item Nach Parameter ableiten und nullsetzen.\\[0.25em] \phantom{llll}$f'(t) = 0$
+            \end{enumerate}
+        \end{itemize}
+        \item Eckpunkte untersuchen
+        \item Kandidaten vergleichen
+        \item Art der Extremalstelle: Hesse-Matrix aufstellen $\mathcal{H} = 
+        \left[
+            \begin{array}{c c} 
+                \frac{\partial^2 f}{\partial x^2}       & \frac{\partial^2 f}{\partial x \partial y}\\
+                \frac{\partial^2 f}{\partial x \partial y}  & \frac{\partial^2 f}{\partial y^2}
+            \end{array}
+        \right]$
+            \begin{itemize}
+                \item Maximum: $\mathcal{H}$ ist negativ definit ($\lambda_i < 0$)
+                \item Minimum: $\mathcal{H}$ ist positiv definit ($\lambda_i > 0$)
+                \item Sattelstelle: $\mathcal{H}$ ist indefinit ($\mathcal{H}$ besitzt $\lambda_i > 0$ \textbf{und} $\lambda_i < 0$)
+            \end{itemize}
+    \end{enumerate}
